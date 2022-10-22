@@ -10,20 +10,11 @@ class SubrectangleQueries
     
     void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue) 
     {
-        for(int i = col1; i < col2; i++)
+        for(int i = row1; i < row2 + 1; i++)
         {
-            for(int j = row1; j < row2; j++)
+            for(int j = col1; j < col2 + 1; j++)
             {
-                matrix[i][j] = newValue;
-                /* for (int i = 0; i < 4; i++)
-                {
-                    for(int j = 0; j < 3; j++)
-                    {
-                        cout << matrix[i][j];
-                    }
-                    cout << endl;
-                }
-                cout << endl; */
+                matrix[i][j] = newValue; 
             }
         }
     }
